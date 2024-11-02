@@ -1,0 +1,87 @@
+/* 
+    Master
+
+    Every component which is used on every part of the site must be styled within in this file. Otherwise styles should be implemented outside of this file
+
+*/
+
+:root{
+    --main-height: 84vh;
+    --max-view-width: 100vh;
+    --max-width: 100%;
+    --simple-border: 3px black solid;
+    --thick-border: 5px black solid;
+
+}
+
+body{
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    height: 10vh;
+    width: var(--max-width);
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.site-title{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px blue solid; */
+}
+
+.site-title #title {
+    border: var(--simple-border);
+    padding: 1rem 3rem;
+}
+
+.site-nav{
+    display: flex;
+    width: 50%;
+    border: var(--thick-border);
+    justify-content: start;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    padding: 1em 1rem;
+    margin: 1rem;
+    width: 25%;
+    border: var(--simple-border);
+    justify-content: center;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+/* Side Bar */
+
+
+.side-bar{
+    width: 20%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.activities{
+    margin-top: 1rem;
+    height: 75%;
+    width: 80%;
+    border: var(--simple-border);
+}
+
+.latest-update{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 15%;
+    border: var(--simple-border);
+}

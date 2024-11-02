@@ -1,0 +1,22 @@
+/* 
+    Main Content
+
+    As the main contents would not be used in every other tab like sidebar and nav in Master making another file for this should clean up and make the master 
+    file much more easier to manage and read.
+    
+*/
+
+.main {
+    height: var(--main-height);
+    width: var(--max-width);
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.main-content {
+    height: var(--main-height);
+    width: 75%;
+    margin: 0 0.5rem;
+    background-color: green;
+}
