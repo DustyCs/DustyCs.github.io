@@ -86,12 +86,37 @@ body{
     border: var(--simple-border);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .header { 
         width: 100vh;
         height: 10%;
         flex-direction: column;
         margin: auto
+    }
+
+    .main{
+        flex-direction: column;
+    }
+   
+    .side-bar{
+        width: 100%;
+    }
+
+    .latest-update {
+        flex-direction: row;
+        height: 25%;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header { 
+        width: 100vh;
+        height: 10%;
+        flex-direction: column;
+        margin: auto;
+        background-color: black;
     }
 
     .main{
