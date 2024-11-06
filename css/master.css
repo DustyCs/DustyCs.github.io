@@ -86,16 +86,22 @@ body{
     border: var(--simple-border);
 }
 
+
 @media only screen and (max-width: 480px) {
     .header { 
-        width: 100vh;
         height: 10%;
         flex-direction: column;
-        margin: auto
+        margin: auto;
+        align-items: center;
+    }
+
+    .header .site-nav{
+        width: 90%;
     }
 
     .main{
         flex-direction: column;
+        align-items: center;
     }
    
     .side-bar{
