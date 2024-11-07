@@ -6,11 +6,13 @@
 */
 
 :root{
-    --main-height: 84vh;
+    --main-height: 80vh;
     --max-view-width: 100vh;
     --max-width: 100%;
     --simple-border: 3px black solid;
     --thick-border: 5px black solid;
+    --simple-border-white: 3px white solid;
+    --mobile-content-height: 100%;
 
 }
 
@@ -43,21 +45,57 @@ body{
     display: flex;
     width: 50%;
     border: var(--thick-border);
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 
 .nav {
     display: flex;
-    padding: 1em 1rem;
+    padding: 1em 0.7em;
     margin: 1rem;
     width: 25%;
     border: var(--simple-border);
     justify-content: center;
 }
 
+
 .nav a{
     text-decoration: none;
+}
+
+#dropdown {
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.project-dropdown{
+    position: absolute;
+    display: none;
+    /* border: 1px red solid; */
+    margin-top: 143px; /* there's probably another way to do this but it works */
+    height: 193px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.project-dropdown a{
+    color: white;
+    top: 50px;
+    position: relative;
+    margin: 0.5rem;
+    background-color: black;
+    padding: 5px;
+    border: var(--simple-border-white);
+}
+
+#dropdown:hover .project-dropdown, #dropdown:active .project-dropdown{
+    display: flex;
+}
+
+.project-dropdown a:hover, .project-dropdown a:active{
+    color: black;
+    background-color: white;
 }
 
 /* Side Bar */
@@ -65,10 +103,10 @@ body{
 
 .side-bar{
     width: 20%;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;   
+
 }
 
 .activities{
@@ -84,6 +122,37 @@ body{
     width: 90%;
     height: 15%;
     border: var(--simple-border);
+    align-items: center;
+    justify-content: center;
+}
+
+.recent-activity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-activity h3{
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    width: auto;
+    padding: 1em;
+    border: var(--simple-border)
+}
+
+/* Activity List */
+
+.activity-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.activity {
+    width: 90%;
+    border: var(--simple-border);
+
 }
 
 
@@ -102,6 +171,13 @@ body{
     .main{
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+    }
+
+    .main-content {
+        margin-top: 0.3rem;
+        height: var(--mobile-content-height);
+        width: 90%;
     }
    
     .side-bar{
@@ -124,7 +200,6 @@ body{
         flex-direction: column;
         margin: auto;
         align-items: center;
-        /* background-color: black; */
     }
 
     .header .site-nav{
@@ -134,6 +209,13 @@ body{
     .main{
         flex-direction: column;
         align-items: center;
+        height: 100vh;
+    }
+
+    .main-content {
+        margin-top: 0.3rem;
+        height: var(--mobile-content-height);
+        width: 90%;
     }
    
     .side-bar{
