@@ -146,7 +146,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    flex-direction: column;
 }
 
 .activity {
@@ -179,6 +179,11 @@ body{
         height: var(--mobile-content-height);
         width: 90%;
     }
+
+    #project-img {
+        width: 70%;
+    }
+    
    
     .side-bar{
         width: 100%;
@@ -213,9 +218,13 @@ body{
     }
 
     .main-content {
-        margin-top: 0.3rem;
+        margin: 1rem 0.5rem;  
         height: var(--mobile-content-height);
         width: 90%;
+    }
+
+    #project-img {
+        width: 50%;
     }
    
     .side-bar{
@@ -226,10 +235,6 @@ body{
         flex-direction: row;
         height: 25%;
         align-items: center;
-    }
-
-    .main-content {
-        margin: 1rem 0.5rem;  
     }
 
 }
