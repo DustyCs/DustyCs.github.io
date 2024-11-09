@@ -1,8 +1,8 @@
 [{
-    "title": "title",
-    "description":"test",
-    "image": "png",
-    "links": "No links for this post"
+    "title": {"value": "Placeholder Title", "type":"txt"},
+    "description": {"value": "lorem ipsum", "type":"txt"},
+    "image": {"value": "null", "type":"img"}, 
+    "links": {"value": "No Links", "type":"txt"}
 },
 {
     "title": "title2",
