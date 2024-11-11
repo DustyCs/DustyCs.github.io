@@ -28,37 +28,54 @@ function setMainContent(data){
     $("#project-description").text(description);
     $("#project-links").text(links);
 
-
-    // Cut
-
+    parseData(".main-content", data)
 
 
-    var size = Object.keys(data[0]).length; 
-    var keys = Object.keys(data[0])
-    var n = 0
-   
-    // C: this is for another page not the main content 
+    // R
     // Object.keys(data[0]).forEach(function(key) {
+    //     var data_value = data[0][key].value;
+    //     var data_type = data[0][key].type;
+    //     var data_class = data[0][key].class;
 
-    //     console.log(key, data[0][key].value); 
-    //     if (data[0][key].type == "txt") {
+    //     console.log(key, data[0][key].value, data_value); 
+
+    //     if (data_type == "txt") {
     //         console.log("txt");
-    //         $(".main-content").append($(`<div class='${"test"}'>${data[0][key].value}</div>`));
+    //         $(".main-content").append($(`<div class='${"test"}'>${data_value}</div>`));
     //     }
-    //     else if (data[0][key].type == "img") {
+    //     else if (data_type == "img") {
     //         console.log("img");
-    //         $(".main-content").append($(`<img class='${data[0][key].class}' src=${data[0][key].value ? data[0][key].value:"/images/placeholder.png"}>`));
+    //         $(".main-content").append($(`<img class='${data_class}' src=${data_value ? data_value : "/images/placeholder.png"}>`));
     //     }
     //     else{
     //         console.log("Error");
     //     }
       
     //   });
-
-    // console.log(keys) // gives me the keys
     
-    // Clean
+}
 
+function setContent(data){
+    parseData(".project-main", data)
+}
+
+export function setLatestUpdate(project) {
+    $("#current_project").html(project);
+}
+
+function getMainData(json){
+    $.getJSON(json, function( data ){ 
+        setMainContent(data) 
+    });
+}
+
+function getContentData(json){
+    $.getJSON(json, function( data ){ 
+        setContent(data) 
+    });
+}
+
+function parseData(div, data){
     Object.keys(data[0]).forEach(function(key) {
         var data_value = data[0][key].value;
         var data_type = data[0][key].type;
@@ -68,32 +85,24 @@ function setMainContent(data){
 
         if (data_type == "txt") {
             console.log("txt");
-            $(".main-content").append($(`<div class='${"test"}'>${data_value}</div>`));
+            $(div).append($(`<div class='${"test"}'>${data_value}</div>`));
         }
         else if (data_type == "img") {
             console.log("img");
-            $(".main-content").append($(`<img class='${data_class}' src=${data_value ? data_value : "/images/placeholder.png"}>`));
+            $(div).append($(`<img class='${data_class}' src=${data_value ? data_value : "/images/placeholder.png"}>`));
         }
         else{
             console.log("Error");
         }
       
       });
-    
 }
-
-export function setLatestUpdate(project) {
-    $("#current_project").html(project);
-}
-
-function getMainData(){
-    $.getJSON("../data/main_content-config.json", function( data ){ 
-        setMainContent(data) 
-    });
-}
-
 
 
 export function renderMainContent(){
-    getMainData();
+    getMainData("../data/main_content-config.json");
+}
+
+export function renderContet(){
+    getContentData("../data/simple-data.json");
 }

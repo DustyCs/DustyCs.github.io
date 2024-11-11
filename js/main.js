@@ -1,4 +1,4 @@
-import { create_activity, setLatestUpdate, renderMainContent } from "./tag_maker.js";
+import { create_activity, setLatestUpdate, renderMainContent } from "./mainController.js";
 
 $(document).ready(function(){
 
