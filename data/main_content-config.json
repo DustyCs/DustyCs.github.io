@@ -1,14 +1,9 @@
-[{
-    "title": {"value": "Placeholder Title", "type":"txt", "class":""},
-    "description": {"value": "lorem ipsum", "type":"txt", "class":""},
-    "image": {"value": null, "type":"img", "class":"project-img"}, 
-    "links": {"value": "No Links", "type":"txt", "class":""},
-    "description2": {"value": "lorem ipsum2", "type":"txt", "class":""}
-},
-{
-    "title": "title2",
-    "description":"test2",
-    "image": "png2",
-    "links": "No links for this post2"
-}
+[
+    {
+        "title": {"value": "Placeholder Title", "type":"txt", "class":""},
+        "description": {"value": "lorem ipsum", "type":"txt", "class":""},
+        "image": {"value": null, "type":"img", "class":"project-img"}, 
+        "links": {"value": "No Links", "type":"txt", "class":""},
+        "description2": {"value": "lorem ipsum2", "type":"txt", "class":""}
+    }
 ]
