@@ -1,18 +1,25 @@
 import { create_activity, setLatestUpdate, renderMainContent } from "./mainController.js";
 
-$(document).ready(function(){
+var maintenance = false
 
-    // Latest Update
-    const latest_project = "This Site";
-    setLatestUpdate(latest_project);
+if (!maintenance) {
+    $(document).ready(function(){
 
-    // Activity
-    var test = create_activity();
-    $(".activity-list").append(test);
-
-    // Content
-
-    renderMainContent();
+        // Latest Update
+        const latest_project = "This Site";
+        setLatestUpdate(latest_project);
     
-
-});
+        // Activity
+        var test = create_activity();
+        $(".activity-list").append(test);
+    
+        // Content
+    
+        renderMainContent();
+        
+    
+    });
+}
+else {
+    $(".container").hide()
+}

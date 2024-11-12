@@ -13,83 +13,60 @@ export function create_activity() {
     return container
 }
 
-export function setIndexContent(data) {
+// R
+// function setMainContent(data){
+//     // var title = data[0].title.value;
+//     // var description = data[0].description.value;
+//     // var image = data[0].image.value;
+//     // var links = data[0].links.value;
 
-}
+//     // $("#project-img").text(image);
+//     // $("#project-title").text(title);
+//     // $("#project-description").text(description);
+//     // $("#project-links").text(links);
 
-function setMainContent(data){
-    var title = data[0].title.value;
-    var description = data[0].description.value;
-    var image = data[0].image.value;
-    var links = data[0].links.value;
-
-    $("#project-img").text(image);
-    $("#project-title").text(title);
-    $("#project-description").text(description);
-    $("#project-links").text(links);
-
-    parseData(".main-content", data)
-
-
-    // R
-    // Object.keys(data[0]).forEach(function(key) {
-    //     var data_value = data[0][key].value;
-    //     var data_type = data[0][key].type;
-    //     var data_class = data[0][key].class;
-
-    //     console.log(key, data[0][key].value, data_value); 
-
-    //     if (data_type == "txt") {
-    //         console.log("txt");
-    //         $(".main-content").append($(`<div class='${"test"}'>${data_value}</div>`));
-    //     }
-    //     else if (data_type == "img") {
-    //         console.log("img");
-    //         $(".main-content").append($(`<img class='${data_class}' src=${data_value ? data_value : "/images/placeholder.png"}>`));
-    //     }
-    //     else{
-    //         console.log("Error");
-    //     }
-      
-    //   });
+//     parseData(".main-content", data)
     
-}
+// }
 
-function setContent(data){
-    parseData(".project-main", data)
+function setContent(container, data, number){
+    parseData(container, data, number)
 }
 
 export function setLatestUpdate(project) {
     $("#current_project").html(project);
 }
 
-function getMainData(json){
-    $.getJSON(json, function( data ){ 
-        setMainContent(data) 
+// R
+// function getMainData(json){
+//     $.getJSON(json, function( data ){ 
+//         setContent(".main-content", data) 
+//     });
+// }
+
+function getContentData(container, json, number){
+    $.getJSON(json, function(data){ 
+        setContent(container, data, number) 
     });
 }
 
-function getContentData(json){
-    $.getJSON(json, function( data ){ 
-        setContent(data) 
-    });
-}
+function parseData(div, data, number=0){
+    console.log(number)
+    Object.keys(data[number]).forEach(function(key) {
+        var data_value = data[number][key].value;
+        var data_type = data[number][key].type;
+        var data_class = data[number][key].class;
+        var placeholder_img = "/images/placeholder.png";
 
-function parseData(div, data){
-    Object.keys(data[0]).forEach(function(key) {
-        var data_value = data[0][key].value;
-        var data_type = data[0][key].type;
-        var data_class = data[0][key].class;
-
-        console.log(key, data[0][key].value, data_value); 
-
+        // console.log(key, data[number][key].value, data_value); // data[0][title].value 
+        
         if (data_type == "txt") {
             console.log("txt");
-            $(div).append($(`<div class='${"test"}'>${data_value}</div>`));
+            $(div).append($(`<div class='${data_class}'>${data_value}</div>`));
         }
         else if (data_type == "img") {
             console.log("img");
-            $(div).append($(`<img class='${data_class}' src=${data_value ? data_value : "/images/placeholder.png"}>`));
+            $(div).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`));
         }
         else{
             console.log("Error");
@@ -100,9 +77,10 @@ function parseData(div, data){
 
 
 export function renderMainContent(){
-    getMainData("../data/main_content-config.json");
+    getContentData(".main-content", "../data/main_content-config.json");
 }
 
-export function renderContet(){
-    getContentData("../data/simple-data.json");
+export function renderProjectContent(){
+    var number = 1;
+    getContentData(".project-main", "../data/project-data.json", number);
 }

@@ -7,17 +7,17 @@
         "links": {"value": "No Links", "type":"txt", "class":""}
     },
     {
-        "title": {"value": "Placeholder Title", "type":"txt", "class":""},
-        "description": {"value": "lorem ipsum", "type":"txt", "class":""},
+        "title": {"value": "Placeholder Title2", "type":"txt", "class":""},
+        "description": {"value": "lorem ipsum2", "type":"txt", "class":""},
         "image": {"value": null, "type":"img", "class":"project-img"}, 
-        "description2": {"value": "lorem ipsum", "type":"txt", "class":""},
+        "description2": {"value": "lorem ipsum2", "type":"txt", "class":""},
         "links": {"value": "No Links", "type":"txt", "class":""}
     },
     {
-        "title": {"value": "Placeholder Title", "type":"txt", "class":""},
-        "description": {"value": "lorem ipsum", "type":"txt", "class":""},
+        "title": {"value": "Placeholder Title3", "type":"txt", "class":""},
+        "description": {"value": "lorem ipsum3", "type":"txt", "class":""},
         "image": {"value": null, "type":"img", "class":"project-img"}, 
-        "description2": {"value": "lorem ipsum", "type":"txt", "class":""},
+        "description2": {"value": "lorem ipsum3", "type":"txt", "class":""},
         "links": {"value": "No Links", "type":"txt", "class":""}
     }
 ]

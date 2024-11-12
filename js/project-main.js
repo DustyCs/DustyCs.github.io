@@ -1,6 +1,9 @@
-import { renderContet } from "./mainController.js";
+import { renderProjectContent } from "./mainController.js";
 
 $(document).ready(function(){
     
+    // Render Content
+
+    // renderProjectContent();
 
 });
