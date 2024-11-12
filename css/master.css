@@ -18,6 +18,7 @@
 
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -73,24 +74,26 @@ body{
     position: absolute;
     display: none;
     /* border: 1px red solid; */
-    margin-top: 143px; /* there's probably another way to do this but it works */
-    height: 193px;
-    flex-direction: column;
-    cursor: pointer;
+    margin-top: 200px; /* there's probably another way to do this but it works*/
+    margin-left: 6%;
+    height: 150px;
+    width: 20%;
 }
 
 .project-dropdown a{
+    display: block;
     color: white;
-    top: 50px;
     position: relative;
     margin: 0.5rem;
     background-color: black;
     padding: 5px;
     border: var(--simple-border-white);
+    width: 60%;
+    text-align: center;
 }
 
 #dropdown:hover .project-dropdown, #dropdown:active .project-dropdown{
-    display: flex;
+    display: block;
 }
 
 .project-dropdown a:hover, .project-dropdown a:active{
@@ -144,17 +147,32 @@ body{
 
 .activity-list{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* R */
+    /* align-items: center; */
+    /* justify-content: center; */
     flex-direction: column;
 }
 
 .activity {
     width: 90%;
     border: var(--simple-border);
-
+    margin: 0.5rem;
 }
 
+.activity-title{
+   display: flex;
+   justify-content: center;
+}
+
+.activity-title h4{
+  margin: 1rem auto 0 auto;
+ }
+
+.activity-overview{
+    padding: 1em;
+}
+
+/* MEDIA */
 
 @media only screen and (max-width: 480px) {
     .header { 
@@ -171,7 +189,7 @@ body{
     .main{
         flex-direction: column;
         align-items: center;
-        height: 100vh;
+        height: auto;
     }
 
     .main-content {
@@ -195,7 +213,14 @@ body{
         align-items: center;
     }
 
+    .activity-list {
+        flex-direction: row;
+        overflow: auto;
+    }
     
+    .activity {
+        flex-shrink: 0;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 950px) {
@@ -214,7 +239,7 @@ body{
     .main{
         flex-direction: column;
         align-items: center;
-        height: 100vh;
+        height: auto;
     }
 
     .main-content {
@@ -236,5 +261,16 @@ body{
         height: 25%;
         align-items: center;
     }
+  
+    .activity-list {
+        flex-direction: row;
+        width: 90%;
+        overflow: auto;
+    }
+    
+    .activity {
+        width: 75%;
+        flex-shrink: 0;
 
+    }
 }
