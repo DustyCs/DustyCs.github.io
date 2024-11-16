@@ -1,5 +1,5 @@
-import { renderProjectContent } from "./mainController.js";
-import { activeTag, showTag } from "./siteEffects.js";
+// import { renderProjectContent } from "./mainController.js";
+import { setActive, removeActive,showTag } from "./siteEffects.js";
 
 
 $(document).ready(function(){
@@ -10,28 +10,18 @@ $(document).ready(function(){
 
     
     $(".project").click(function(){
-        // console.log(this.id)
-        // R
-        // if (this.id == "blog"){
-        //     $("#project").hide();
-        //     $("#fun").hide();
-        //     console.log("run")
-        // }
-        // if (this.id == "project"){
-        //     $("#blog").hide();
-        //     $("#fun").hide();
-        //     console.log("run")
-        // }
-        // if (this.id == "fun"){
-        //     $("#project").hide();
-        //     $("#blog").hide();
-        //     console.log("run")
-        // }
-        activeTag(this.id, "#blog", "#project", "#fun");
-
+        if(!$(this).hasClass('active')){
+            setActive("#" + this.id);
+        }
+        else(
+            removeActive("#" + this.id)
+        )
+        // console.log($(this).attr("class")) ;
+        // console.log($(this).hasClass('active'));
     })
 
-    $("#back").click(function () {
-        showTag("#blog", "#project", "#fun")
-    })
-    });
+    // $("#back").click(function () {
+    //     showTag("#blog", "#project", "#fun")
+    // })
+
+});
