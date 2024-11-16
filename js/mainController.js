@@ -13,22 +13,6 @@ export function create_activity() {
     return container
 }
 
-// R
-// function setMainContent(data){
-//     // var title = data[0].title.value;
-//     // var description = data[0].description.value;
-//     // var image = data[0].image.value;
-//     // var links = data[0].links.value;
-
-//     // $("#project-img").text(image);
-//     // $("#project-title").text(title);
-//     // $("#project-description").text(description);
-//     // $("#project-links").text(links);
-
-//     parseData(".main-content", data)
-    
-// }
-
 function setContent(container, data, number){
     parseData(container, data, number)
 }
@@ -36,13 +20,6 @@ function setContent(container, data, number){
 export function setLatestUpdate(project) {
     $("#current_project").html(project);
 }
-
-// R
-// function getMainData(json){
-//     $.getJSON(json, function( data ){ 
-//         setContent(".main-content", data) 
-//     });
-// }
 
 function getContentData(container, json, number){
     $.getJSON(json, function(data){ 
