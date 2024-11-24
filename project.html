@@ -18,9 +18,14 @@
                 <h1 id="title">DustyCode DevLog</h1>
             </div>
             <div class="site-nav">
-                <div class="nav"><a href="index.html">Home</a></div>
+                <div class="nav"><a href="./index.html">Home</a></div>
                 <div class="nav" id="dropdown">
-                    <a href="#">Projects</a>
+                    <a href="project.html">Projects</a>
+                    <div class="project-dropdown">
+                        <a href="./projects/blog_posts.html">Blog</a>
+                        <a href="./projects/projects.html">Projects</a>
+                        <a href="./projects/fun_projects.html">Fun</a>
+                    </div>
                 </div>
                 <div class="nav"><a href="#">Specials</a></div>
             </div>
@@ -30,25 +35,30 @@
             <div class="project" id="blog">
                 <div class="project-title">Blog Posts</div>
                 <img src="" alt="" srcset="" class="project-img">
-                <div class="project-description">
-                    <p>Check out my progress and learnings!</p>
-                    <button>BLOG</button>
+                <div class="min-description">Check out my progress and learnings!</div>
+                <div class="max-description" style="display: none;">
+                    <p>Check out my progress and learnings! I upload things that might interest you!</p>
+                    <a href="/projects/blog_posts.html" class="redirect">BLOG</a>
                 </div>
+                    
             </div>
             <div class="project" id="project">
                 <div class="project-title">Projects</div>
                 <img src="" alt="" srcset="" class="project-img">
-                <div class="project-description">
-                    <p>list of projects</p>
-                    <button>PROJECTS</button>
+                <div class="min-description">Actual Projects!</div>
+                <div class="max-description" style="display: none;">
+                    <p>Maybe you'll find something useful?</p>
+                    <a href="/projects/projects.html" class="redirect">Projects</a>
                 </div>
+                
             </div>
             <div class="project" id="fun">
                 <div class="project-title">Fun Projects</div>
                 <img src="" alt="" srcset="" class="project-img">
-                <div class="project-description">
-                    <p>Something fun</p>
-                    <button>FUN</button>
+                <div class="min-description">Fun Projects!</div>
+                <div class="max-description" style="display: none;">
+                    <p>Its simple... FUN</p>
+                    <a href="/projects/fun_projects.html" class="redirect">Fun</a>
                 </div>
             </div>
            </div>
