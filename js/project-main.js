@@ -16,5 +16,9 @@ $(document).ready(function(){
     $("#back").click(function(){
       window.open("../index.html");
     })
+
+    // $(".max-description").hide();
+    // console.log($("#blog").find(".max-description"));
+    // $("#blog").find(".max-description").show(); // this works
 });
 
