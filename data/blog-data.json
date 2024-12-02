@@ -1,0 +1,33 @@
+[
+    {
+        "title": {"value": "Coming to Life", 
+        
+        "type":"txt", "class":""},
+
+        "description": {"value": "The blog site is here!!! 25/11/2024! I really didn't think that I'll be able to actually push through my lazyness and do something like this but here I am!",
+        
+        "type":"txt", "class":""},
+
+        "image": {"value": "/images/blog-img/coming_soon.PNG", 
+        
+        "type":"img", "class":"project-img"}, 
+
+        "links": {"value": "No Links", 
+        
+        "type":"txt", "class":""}
+    },
+    {
+        "title": {"value": "Placeholder Title2", "type":"txt", "class":""},
+        "description": {"value": "lorem ipsum2", "type":"txt", "class":""},
+        "image": {"value": null, "type":"img", "class":"project-img"}, 
+        "description2": {"value": "lorem ipsum2", "type":"txt", "class":""},
+        "links": {"value": "No Links", "type":"txt", "class":""}
+    },
+    {
+        "title": {"value": "Placeholder Title3", "type":"txt", "class":""},
+        "description": {"value": "lorem ipsum3", "type":"txt", "class":""},
+        "image": {"value": null, "type":"img", "class":"project-img"}, 
+        "description2": {"value": "lorem ipsum3", "type":"txt", "class":""},
+        "links": {"value": "No Links", "type":"txt", "class":""}
+    }
+]
