@@ -1,0 +1,21 @@
+Project 
+HTML
+
+    + Add html and css to the divs explaining whats within it - done
+    + Hide the redirect button and make it only appear when the tag is focused on - done
+    + Add html and css design
+
+Controller
+
+    When user is sent to the individual project sites load the appropriate JSON data within the site
+
+BLOG
+
+- Parse Data
+- Design BLOG
+
+
+Self-Note:
+
+Can use show and hide functions
+Maybe toggle the functions? if the blog one is focused show the minimal description and so on
