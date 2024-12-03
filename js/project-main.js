@@ -1,19 +1,26 @@
-// import { renderProjectContent } from "./mainController.js";
+import {getSelectedPost, errorDataPage, renderData} from "./projectController.js";
 import { activeTag } from "./siteEffects.js";
 
 
 $(document).ready(function(){
-    $(".project").click(function(){
-        activeTag(this.id)
-    })
+   
+  getSelectedPost(0);
+  errorDataPage();
 
-    $("#back").click(function(){
-      window.open("../index.html");
-    })
-
-    $(".site-title").click(function(){
-      window.location.replace("../index.html");
-    })
+  renderData();
 
 });
+
+$(".project").click(function(){
+  activeTag(this.id)
+})
+
+$("#back").click(function(){
+window.open("../index.html");
+})
+
+$(".site-title").click(function(){
+window.location.replace("../index.html");
+})
+
 
