@@ -16,6 +16,7 @@ $(document).ready(function(){
 $(".recent-uploads").on('click', ".blog-upload",function(){
   $(".post-title").empty();
   $(".post-content").empty();
+  $(".error").remove();
 
   getSelectedPost(this.id);
 })
