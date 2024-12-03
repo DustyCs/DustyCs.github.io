@@ -16,36 +16,7 @@ export function activeTag(div){
 
         $(div).addClass("active").css({"width": "90%"});
         $(div).find(".max-description").show();
-        // console.log($("div.project"));
-        // setActive(div);
-        // maxWidth(div);
     }
-    //R
-    // else{
-    //     removeActive(div);
-    //     $(div).css({"width": "30%"});
-    // }
-
     showDescription(div);
 }
-
-// R
-// function maxWidth(div){
-//     $(div).css({"width": "90%"})
-// }
-
-// function setActive(div){
-//     $(div).addClass("active");
-// }
-
-// R
-// function removeActive(div){
-//     $(div).removeClass("active");
-// }
-
-// function showDescription(div){
-//     // $("#blog").find(".max-description").show();
-//     $(div).find(".max-description").show();
-
-// }
 
