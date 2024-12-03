@@ -1,33 +1,69 @@
 [
     {
+        "id": {"value": "0"},
+
+        "parent": {"value": true},
+
         "title": {"value": "Coming to Life", 
         
-        "type":"txt", "class":""},
+        "type":"txt", "class":"", "parent_class": ".post-title"},
 
         "description": {"value": "The blog site is here!!! 25/11/2024! I really didn't think that I'll be able to actually push through my lazyness and do something like this but here I am!",
         
-        "type":"txt", "class":""},
+        "type":"txt", "class":"", "parent_class": ".post-content"},
 
-        "image": {"value": "/images/blog-img/coming_soon.PNG", 
+        "image": {"value": "../data/images/blog-img/coming_soon.png", 
         
-        "type":"img", "class":"project-img"}, 
+        "type":"img", "class":"blog-img", "parent_class": ".post-content"}, 
 
         "links": {"value": "No Links", 
         
-        "type":"txt", "class":""}
+        "type":"txt", "class":"", "parent_class": ".post-content"}
     },
     {
-        "title": {"value": "Placeholder Title2", "type":"txt", "class":""},
-        "description": {"value": "lorem ipsum2", "type":"txt", "class":""},
-        "image": {"value": null, "type":"img", "class":"project-img"}, 
-        "description2": {"value": "lorem ipsum2", "type":"txt", "class":""},
-        "links": {"value": "No Links", "type":"txt", "class":""}
+        "id": {"value": "1"},
+
+        "parent": {"value": true},
+
+        "title": {"value": "Test 2", 
+        
+        "type":"txt", "class":"", "parent_class": ".post-title"},
+
+        "description": {"value": "Placeholder Data",
+        
+        "type":"txt", "class":"", "parent_class": ".post-content"},
+
+        "image": {"value": null, 
+        
+        "type":"img", "class":"blog-img", "parent_class": ".post-content"}, 
+
+        "links": {"value": "No Links", 
+        
+        "type":"txt", "class":"", "parent_class": ".post-content"}
     },
     {
-        "title": {"value": "Placeholder Title3", "type":"txt", "class":""},
-        "description": {"value": "lorem ipsum3", "type":"txt", "class":""},
-        "image": {"value": null, "type":"img", "class":"project-img"}, 
-        "description2": {"value": "lorem ipsum3", "type":"txt", "class":""},
-        "links": {"value": "No Links", "type":"txt", "class":""}
+        "id": {"value": "2"},
+
+        "parent": {"value": true},
+
+        "title": {"value": "Test 3", 
+        
+        "type":"txt", "class":"", "parent_class": ".post-title"},
+
+        "description": {"value": "Placeholder Data",
+        
+        "type":"txt", "class":"", "parent_class": ".post-content"},
+
+        "image": {"value": null, 
+        
+        "type":"img", "class":"blog-img", "parent_class": ".post-content"}, 
+
+        "links": {"value": "No Links", 
+        
+        "type":"txt", "class":"", "parent_class": ".post-content"},
+
+        "image2": {"value": null, 
+        
+        "type":"img", "class":"blog-img", "parent_class": ".post-content"}
     }
 ]

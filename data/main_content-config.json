@@ -1,5 +1,6 @@
 [
     {
+        "id": {"value": "0"},
         "title": {"value": "Lazy Placeholder Title", "type":"txt", "class":"project-title"},
         "image": {"value": null, "type":"img", "class":"project-img"},
         "description": {"value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora porro aliquam modi. Corrupti quam inventore est iusto veritatis placeat sapiente tenetur ratione earum velit, at modi id nulla eos expedita.", 
