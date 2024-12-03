@@ -5,7 +5,7 @@ export function getSelectedPost(id){
 }
 
 export function renderData(){
-    getBlogData(".test","../data/blog-data.json");
+    getBlogData("../data/blog-data.json");
 }
 
 export function errorDataPage(){

@@ -27,34 +27,38 @@ export function getContentData(container, json, number){
     });
 }
 
-export function getBlogData(div, json){
-    // console.log("run")
+export function getBlogData(json){
     $.getJSON(json, function(data){
         var dataLength = Object.keys(data).length;
-        // console.log(dataLength); 
-        
+        // console.log(data[0]["title"].value,data[0]["description"].value,data[0]["image"].value);
         for (let i = 0; i < dataLength; i++) {
-            Object.keys(data[i]).forEach(function() {
-                // console.log(key, data[i][key].value); 
-                renderBlogData(div, data[i]["title"].value, data[i]["description"].value, data[i]["image"].value);
-             });
+            // Object.keys(data[i]).forEach(function() {
+            //     // console.log(key, data[i][key].value);
+            //     console.log("1") 
+            //         // console.log("1")
+            //     renderBlogData(data[i]["title"].value, data[i]["description"].value, data[i]["image"].value);
+                
+            //  });
+            renderBlogData(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value)
+            // console.log(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value)
+            //  console.log(Object.keys(data[i]["title"]),data[Object.keys(data[i]["title"].value)])
         }
     });
 }
 
-function renderBlogData(div, title, description, image){
-    console.log(div, title, description, image);
-
+function renderBlogData(title, description, image){
     var blog_upload = $("<div class='blog-upload'></div>");
-
     var blog_title = title;
     var blog_overview = description.slice(0, 100) + "...";
+    var blog_image = image
 
     var title = $("<div class='upload-title'></div>").text(blog_title);
     var overview = $("<div class='upload-overview'></div>").text(blog_overview);
+    var smallImage = $(`<img class='upload-img' src=${blog_image}/>`)
 
     blog_upload.append(title);
     blog_upload.append(overview);
+    blog_upload.append(smallImage);
 
     $(".recent-uploads").append(blog_upload);
 }
@@ -74,25 +78,54 @@ function parseData(div, data, number=0){
             // console.log(key, data[number][key].parent_class, data_value); // data[0][title].value 
             // console.log(data[number]["id"].value)
             if(data_id == number){
-                if (data_type == "txt") {
-                    // console.log("txt");
-                    div_parent ? // console.log(data_parent_class):console.log("nope")
-                    $(data_parent_class).append($(`<div class='${data_class}'>${data_value}</div>`)) :
-                    $(div).append($(`<div class='${data_class}'>${data_value}</div>`));
-                }
-                else if (data_type == "img") {
-                    // console.log("img");
-                    $(data_parent_class).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`));
-                }
+                renderSelectedPost(data_type, div_parent, div, data_parent_class, data_class, data_value, placeholder_img)
+                // Cleaned
+                // R
+                // if (data_type == "txt") {
+                //     div_parent ? 
+                //     $(data_parent_class).append($(`<div class='${data_class}'>${data_value}</div>`)) :
+                //     $(div).append($(`<div class='${data_class}'>${data_value}</div>`));
+                // }
+                // if (data_type == "img") {
+                //     div_parent ? 
+                //     $(data_parent_class).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`)):
+                //     $(div).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`));
+                // }
             }
           });
     } catch (error) {
         $(div).append($(`<div class='error'>${"NULL - NO DATA FOUND"}</div>`));
-        console.log(error)
+        console.log(error);
     }
    
 }
 
+function renderSelectedPost(dataType, hasParent, div, parentDiv, dataClass, dataValue, placeholderImage){
+    if(dataType == "txt"){
+        hasParent ? $(parentDiv).append($(`<div class='${dataClass}'>${dataValue}</div>`)) : 
+        $(div).append($(`<div class='${dataClass}'>${dataValue}</div>`));
+    }
+    if(dataType == "img"){
+        hasParent ? $(parentDiv).append($(`<img class='${dataClass}' src=${setImageSource(dataValue)}>`)) : 
+        $(div).append($(`<img class='${dataClass}' src=${setImageSource(dataValue)}>`));
+    }
+
+    // Trying to simplify it more but makes no sense to do it...  
+    // if (hasParent){
+    //     dataType == "txt" ? 
+    //     $(parentDiv).append($(`<div class='${dataClass}'>${dataValue}</div>`)) : 
+    //     $(parentDiv).append($(`<img class='${dataClass}' src=${dataValue ? dataValue : placeholderImage}>`));
+    // }
+
+}
+
+function setImageSource(src){
+    if(!src){
+        return "/images/placeholder.png";
+    }
+
+    return src
+}
 
 export function renderMainContent(){
     getContentData(".main-content", "../data/main_content-config.json");
