@@ -3,12 +3,6 @@ import { activeTag } from "./siteEffects.js";
 
 
 $(document).ready(function(){
-    
-    // Render Content
-
-    // renderProjectContent();
-
-    
     $(".project").click(function(){
         activeTag(this.id)
     })
@@ -17,8 +11,9 @@ $(document).ready(function(){
       window.open("../index.html");
     })
 
-    // $(".max-description").hide();
-    // console.log($("#blog").find(".max-description"));
-    // $("#blog").find(".max-description").show(); // this works
+    $(".site-title").click(function(){
+      window.location.replace("../index.html");
+    })
+
 });
 

@@ -34,7 +34,18 @@ body{
     width: 30%;
     align-items: center;
     justify-content: center;
+
     /* border: 1px blue solid; */
+}
+
+#title{
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#title:hover{
+    background-color: black;
+    color: white;
 }
 
 .site-title #title {

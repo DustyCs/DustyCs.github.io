@@ -15,21 +15,24 @@
 .blog-right{
     width: 35%;
     height: 100%;
-    border: 1px black solid;
+    /* border: 1px black solid; */
 
 }
 
 /* Content */
 
 
-.blog-title {
+.post-title {
     color: white;
-    border: 3px solid black;
+    border: 3px solid white;
     display: inline-block;
+    margin: 1em;
 }
 
 .blog-content{
     background-color: black;
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: white;
 }
 
@@ -38,3 +41,20 @@
     border: 5px white solid
 }
 
+.post-content{
+    margin: 0 2rem;
+}
+
+/* Recent Uploads */
+
+.recent-uploads{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-upload{
+    border: 3px black solid;
+    width: 70%;
+    margin: 1rem;
+}
