@@ -1,3 +1,5 @@
+// import placeholder from "/images/placeholder.png";
+
 export function create_activity() {
     var container = $("<div class='activity'></div>")
 
@@ -39,26 +41,26 @@ export function getBlogData(json){
             //     renderBlogData(data[i]["title"].value, data[i]["description"].value, data[i]["image"].value);
                 
             //  });
-            renderBlogData(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value)
+            renderBlogData(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value,data[i]["id"].value)
             // console.log(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value)
             //  console.log(Object.keys(data[i]["title"]),data[Object.keys(data[i]["title"].value)])
         }
     });
 }
 
-function renderBlogData(title, description, image){
-    var blog_upload = $("<div class='blog-upload'></div>");
+function renderBlogData(title, description, image, id){
+    var blog_upload = $(`<div class='blog-upload' id="${id}"></div>`);
     var blog_title = title;
     var blog_overview = description.slice(0, 100) + "...";
     var blog_image = image
 
     var title = $("<div class='upload-title'></div>").text(blog_title);
     var overview = $("<div class='upload-overview'></div>").text(blog_overview);
-    var smallImage = $(`<img class='upload-img' src=${blog_image}/>`)
-
+    var smallImage = $(`<img class='upload-img' src=${setImageSource(blog_image)} />`)
+    
     blog_upload.append(title);
-    blog_upload.append(overview);
     blog_upload.append(smallImage);
+    blog_upload.append(overview);
 
     $(".recent-uploads").append(blog_upload);
 }
@@ -120,10 +122,7 @@ function renderSelectedPost(dataType, hasParent, div, parentDiv, dataClass, data
 }
 
 function setImageSource(src){
-    if(!src){
-        return "/images/placeholder.png";
-    }
-
+    if(!src){ return "/images/placeholder.png"; }    
     return src
 }
 

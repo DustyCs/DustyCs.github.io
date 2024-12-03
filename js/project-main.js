@@ -9,7 +9,16 @@ $(document).ready(function(){
 
   renderData();
 
+  
 });
+
+// Apparantly called event delegation see this for more -> https://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements
+$(".recent-uploads").on('click', ".blog-upload",function(){
+  $(".post-title").empty();
+  $(".post-content").empty();
+
+  getSelectedPost(this.id);
+})
 
 $(".project").click(function(){
   activeTag(this.id)

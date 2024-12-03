@@ -11,3 +11,7 @@ export function renderData(){
 export function errorDataPage(){
     $(".error_data").hide();
 }
+
+export function selectPost(object){
+    console.log(object.id);
+}
