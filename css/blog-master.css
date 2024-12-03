@@ -1,0 +1,40 @@
+.blog-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 95vh;
+}
+
+.blog-left{
+    width: 55%;
+    height: 90%;
+    /* border: 1px black solid; */
+}
+
+.blog-right{
+    width: 35%;
+    height: 100%;
+    border: 1px black solid;
+
+}
+
+/* Content */
+
+
+.blog-title {
+    color: white;
+    border: 3px solid black;
+    display: inline-block;
+}
+
+.blog-content{
+    background-color: black;
+    color: white;
+}
+
+.blog-img{
+    width: 70%;
+    border: 5px white solid
+}
+
