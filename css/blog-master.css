@@ -62,3 +62,19 @@
 .upload-img {
     width: 50%;
 }
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    display: flex;
+    right: 0;
+    left: 1400px;
+    bottom: 0;
+    width: auto;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    
+}

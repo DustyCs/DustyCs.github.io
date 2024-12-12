@@ -21,6 +21,19 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.footer {
+    position: fixed;
+    display: flex;
+    left: 5px;
+    bottom: 0;
+    width: auto;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .header {
     display: flex;
     height: 10vh;
