@@ -41,5 +41,6 @@
 .project-img {
     width: 40%;
     margin: 1rem 0;
+    border: 5px black solid;
 }
 

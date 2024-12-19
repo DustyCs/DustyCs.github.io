@@ -4,15 +4,13 @@
 
         "parent": {"value": true},
 
-        "title": {"value": "Coming to Life", 
-        
-        "type":"txt", "class":"", "parent_class": ".post-title"},
+        "title": {"value": "Coming to Life", "type":"txt", "class":"", "parent_class": ".post-title"},
 
         "description": {"value": "The blog site is here!!! 25/11/2024! I really didn't think that I'll be able to actually push through my lazyness and do something like this but here I am!",
         
         "type":"txt", "class":"", "parent_class": ".post-content"},
 
-        "image": {"value": "../data/images/blog-img/coming_soon.png", 
+        "image": {"value": "/images/blog-img/coming_soon.png", 
         
         "type":"img", "class":"blog-img", "parent_class": ".post-content"}, 
 

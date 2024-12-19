@@ -1,5 +1,3 @@
-// import placeholder from "/images/placeholder.png";
-
 export function create_activity() {
     var container = $("<div class='activity'></div>")
 
@@ -32,18 +30,8 @@ export function getContentData(container, json, number){
 export function getBlogData(json){
     $.getJSON(json, function(data){
         var dataLength = Object.keys(data).length;
-        // console.log(data[0]["title"].value,data[0]["description"].value,data[0]["image"].value);
         for (let i = 0; i < dataLength; i++) {
-            // Object.keys(data[i]).forEach(function() {
-            //     // console.log(key, data[i][key].value);
-            //     console.log("1") 
-            //         // console.log("1")
-            //     renderBlogData(data[i]["title"].value, data[i]["description"].value, data[i]["image"].value);
-                
-            //  });
             renderBlogData(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value,data[i]["id"].value)
-            // console.log(data[i]["title"].value,data[i]["description"].value,data[i]["image"].value)
-            //  console.log(Object.keys(data[i]["title"]),data[Object.keys(data[i]["title"].value)])
         }
     });
 }
@@ -66,7 +54,6 @@ function renderBlogData(title, description, image, id){
 }
 
 function parseData(div, data, number=0){
-    // console.log(number)
     try {
         Object.keys(data[number]).forEach(function(key) {
             var data_value = data[number][key].value;
@@ -81,18 +68,6 @@ function parseData(div, data, number=0){
             // console.log(data[number]["id"].value)
             if(data_id == number){
                 renderSelectedPost(data_type, div_parent, div, data_parent_class, data_class, data_value, placeholder_img)
-                // Cleaned
-                // R
-                // if (data_type == "txt") {
-                //     div_parent ? 
-                //     $(data_parent_class).append($(`<div class='${data_class}'>${data_value}</div>`)) :
-                //     $(div).append($(`<div class='${data_class}'>${data_value}</div>`));
-                // }
-                // if (data_type == "img") {
-                //     div_parent ? 
-                //     $(data_parent_class).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`)):
-                //     $(div).append($(`<img class='${data_class}' src=${data_value ? data_value : placeholder_img}>`));
-                // }
             }
           });
     } catch (error) {
@@ -111,14 +86,6 @@ function renderSelectedPost(dataType, hasParent, div, parentDiv, dataClass, data
         hasParent ? $(parentDiv).append($(`<img class='${dataClass}' src=${setImageSource(dataValue)}>`)) : 
         $(div).append($(`<img class='${dataClass}' src=${setImageSource(dataValue)}>`));
     }
-
-    // Trying to simplify it more but makes no sense to do it...  
-    // if (hasParent){
-    //     dataType == "txt" ? 
-    //     $(parentDiv).append($(`<div class='${dataClass}'>${dataValue}</div>`)) : 
-    //     $(parentDiv).append($(`<img class='${dataClass}' src=${dataValue ? dataValue : placeholderImage}>`));
-    // }
-
 }
 
 function setImageSource(src){
@@ -127,5 +94,5 @@ function setImageSource(src){
 }
 
 export function renderMainContent(){
-    getContentData(".main-content", "../data/main_content-config.json");
+    getContentData(".main-content", "../data/main_content-config.json", 0);
 }
