@@ -94,5 +94,5 @@ function setImageSource(src){
 }
 
 export function renderMainContent(){
-    getContentData(".main-content", "../data/main_content-config.json");
+    getContentData(".main-content", "../data/main_content-config.json", 0);
 }

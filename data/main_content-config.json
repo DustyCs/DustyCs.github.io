@@ -4,15 +4,13 @@
 
         "parent": {"value": null},
 
-        "title": {"value": "Lazy Placeholder Title", 
-        
-        "type":"txt", "class":"project-title", "parent_class": ".post-title"},
+        "title": {"value": "Blog Site Underworks! + PostMaker Project", "type":"txt", "class":"project-title", "parent_class": ".post-title"},
 
-        "image": {"value": null, 
+        "image": {"value": "/images/blog-img/coming_soon.png", 
         
         "type":"img", "class":"project-img", "parent_class": ".post-content"}, 
 
-        "description": {"value":  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora porro aliquam modi. Corrupti quam inventore est iusto veritatis placeat sapiente tenetur ratione earum velit, at modi id nulla eos expedita.",
+        "description": {"value": "The blog site is here!!! 25/11/2024! I really didn't think that I'll be able to actually push through my lazyness and do something like this but here I am!",
         
         "type":"txt", "class":"project-description", "parent_class": ".post-content"}
     }
