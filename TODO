@@ -19,3 +19,17 @@ Self-Note:
 
 Can use show and hide functions
 Maybe toggle the functions? if the blog one is focused show the minimal description and so on
+
+
+Maybe:
+
+A single JSON to control everything that would update values based on the site?
+Add an admin site that manages things for JSON instead of counting on PostMaker and make PostMaker a project of its own
+This way the github page could be controlled on its own rather than counting on Postmaker
+
+
+ON MAIN PAGE LOAD
+
+GET ANY NEW DATA FROM JSON DATA(CREATE)
+THEN PUSH IT TO THE BLOG-DATA
+THEN USE THE BLOG DATA 
