@@ -3,7 +3,7 @@ import ResponsiveSearch from "./SearchBar"
 
 export default function NavBar() {
   return (
-     <div className="w-full h-16 bg-gray-100 shadow-2xl text-black p-4 flex items-center">
+     <div className="w-full h-16 bg-gray-100 shadow-xl text-black p-4 flex items-center">
         <div className="relative w-[20%]">
             <h1 className="text-4xl cursor-pointer">DustyCS</h1>
             <p className="absolute -bottom-4 left-7 text-sm pl-5">dustyhanscs</p>
