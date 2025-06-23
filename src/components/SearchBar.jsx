@@ -27,9 +27,9 @@ export default function ResponsiveSearch() {
 
         <input
           className="flex-1 bg-transparent text-xl focus:outline-none placeholder-gray-500"
-          placeholder="Search"
+          placeholder="Search..."
         />
-        <button className="bg-blue-500 text-white px-3 py-1 rounded-md text-xl hover:bg-blue-600 transition">
+        <button className="border-1 border-black text-black px-3 py-1 cursor-pointer rounded-md text-xl hover:bg-gray-300 transition">
           Search
         </button>
       </div>
