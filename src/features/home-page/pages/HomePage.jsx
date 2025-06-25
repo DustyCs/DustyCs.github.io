@@ -15,7 +15,7 @@ function Introduction(){
               <motion.div className='absolute bottom-27 right-0'
                 animate={{ y: [0, 0, -18, -15, 73, 35, 50, 50], 
                         x: [0, -160, -300, -470, -580, -930, -940, -1100],
-                        rotate: [20, -10, -5, -5, -10, -10, -10, 20] }}
+                        rotate: [20, -10, -5, -5, 5, -10, -10, 20] }}
                 transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
                 >
                     <img src={DustyCS} alt="" className='' />
