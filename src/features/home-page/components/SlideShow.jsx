@@ -12,12 +12,12 @@ export default function ComponentSlider({ slides }) {
         setCurrent(current === 0 ? slides.length - 1 : current - 1);
     };
 
-    useEffect(() => {
-        const interval = setInterval(next, 3000);
+    // useEffect(() => {
+    //     const interval = setInterval(next, 3000);
 
-        // Clear the interval when the component unmounts
-        return () => clearInterval(interval);
-    }, [current]);
+    //     // Clear the interval when the component unmounts
+    //     return () => clearInterval(interval);
+    // }, [current]);
 
     const CurrentSlide = slides[current]; // component
 
