@@ -25,11 +25,8 @@ export default function ResponsiveSearch() {
           <option value="license">License</option>
         </select>
 
-        <input
-          className="flex-1 bg-transparent text-xl focus:outline-none placeholder-gray-500"
-          placeholder="Search..."
-        />
-        <button className="border-1 border-black text-black px-3 py-1 cursor-pointer rounded-md text-xl hover:bg-gray-300 transition">
+        <input className="flex-1 bg-transparent text-xl focus:outline-none placeholder-gray-500" placeholder="Search..."/>
+        <button className="border-1 border-black text-black px-3 py-1 cursor-pointer rounded-md text-xl hover:bg-gray-300 transition md:hidden lg:block">
           Search
         </button>
       </div>
