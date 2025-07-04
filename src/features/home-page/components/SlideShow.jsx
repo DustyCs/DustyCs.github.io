@@ -22,8 +22,10 @@ export default function ComponentSlider({ slides }) {
     const CurrentSlide = slides[current]; // component
 
   return (
-    <div className="h-[20rem] relative border">
-        <CurrentSlide />
+    <div className="h-[22rem] relative flex items-center ">
+        <div className='h-[90%] '>
+            <CurrentSlide />
+        </div>
         <div className="absolute bottom-0 left-2 space-x-2">
             <button className='text-2xl bg-gray-100 border-1' onClick={prev}>← Prev</button>
             <button className='text-2xl bg-gray-100 border-1' onClick={next}>Next →</button>
