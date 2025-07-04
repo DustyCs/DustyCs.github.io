@@ -11,20 +11,21 @@ import { useEffect } from 'react'
 import LatestRelease from '../components/LatestRelease'
 
 function Introduction() {
-  return (
-    <div className="flex grow-0 overflow-hidden h-[20rem] relative pointer-events-none">
-      <div className="text-2xl w-[35%] flex px-4 z-10 flex-col">
+  return ( // just testing for now adding responsiveness
+    <div className="flex grow-0 overflow-hidden border sm:h-[20rem] relative pointer-events-none
+                    flex-col items-center sm:items-start sm:flex-row">
+      <div className="text-2xl w-[100%] sm:w-[35%] flex px-4 z-10 flex-col">
         <div className='text-4xl font-extrabold'>DustyHansCS</div>
         <div>
           <p className="text-md">Personal Site</p>
           <p>I'm a developer</p>
         </div>
       </div>
-      <div className="relative w-[65%] h-full overflow-hidden">
+      <div className="relative w-[65%] sm:h-full overflow-hidden">
         <img
           src={IntroductionBG}
           alt="Online RPS Site"
-          className="w-screen h-[19.9rem] object-bottom shadow-2xl"
+          className="w-screen sm:h-[19.9rem] object-bottom shadow-2xl"
         />
         <motion.div
           className="absolute bottom-[1rem] right-0 w-[20%] h-[60%] z-20"
