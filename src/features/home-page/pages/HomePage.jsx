@@ -9,6 +9,7 @@ import GameLatest from "../../../assets/projects/Slimes Hometown.png"
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 import LatestRelease from '../components/LatestRelease'
+import LicenseToUse from '../components/LicenseToUse'
 
 function Introduction() {
   return ( // just testing for now adding responsiveness
@@ -93,10 +94,13 @@ export default function HomePage() {
   return (
     <div className='h-full'>
         <ComponentSlider slides={[Introduction, LatestProject, LatestGame]}/>
-        <div className='w-[95vw] m-auto bg-gray-50'>
-            <h1 className='text-2xl px-4'>GitHub Contributions <span className='text-xs'>some commits are missing</span></h1>
-            <img onClick={() => window.open("https://github.com/DustyCs")} src="https://ghchart.rshah.org/DustyCs" alt="GitHub Contributions Chart" />
+        <div className='w-[95vw] m-auto grid grid-cols-2 bg-gray-50'>
+            <div className='w-full col-span-1'>
+              <h1 className='text-2xl px-4'>GitHub Contributions <span className='text-xs'>some commits are missing</span></h1>
+              <img onClick={() => window.open("https://github.com/DustyCs")} src="https://ghchart.rshah.org/DustyCs" alt="GitHub Contributions Chart" />
+            </div>
             <LatestRelease />
+            <LicenseToUse/>
         </div>
     </div>
   )
