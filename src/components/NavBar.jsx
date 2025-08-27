@@ -11,11 +11,11 @@ export default function NavBar() {
         <nav className="w-[40%] flex justify-center">
             <ul className="flex flex-col lg:flex-row sm:space-x-6">
                 <div className="flex space-x-6 lg:flex-row lg:justify-start lg:items-start justify-center items-center">
-                  <li className="lg:text-3xl text-xl font-bold"><a href="">Home</a></li>
-                  <li className="lg:text-3xl text-xl font-bold"><a href="">Projects</a></li>
+                  <li className="lg:text-3xl text-xl font-bold"><a href="/">Home</a></li>
+                  <li className="lg:text-3xl text-xl font-bold"><a href="/projects">Projects</a></li>{/* I could just create a project repo aswell and host it */}
                 </div>
                 <div className="flex space-x-6 lg:flex-row justify-center items-center">
-                  <li className="lg:text-3xl text-xl font-bold"><a href="">Games</a></li>
+                  <li className="lg:text-3xl text-xl font-bold"><a href="/games">Games</a></li>
                   <li className="lg:text-3xl text-xl font-bold"><a href="">License</a></li>
                 </div>
             </ul>
