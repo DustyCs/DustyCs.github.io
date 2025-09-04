@@ -1,7 +1,11 @@
 import ComponentSlider from '../components/SlideShow'
 import IntroductionBG from '../../../assets/projects/SliderBG2.png'
 import DustyCS from '../../../assets/projects/DustyChar.png'
+
 import Portfoli from '../components/Portfoli'
+import AboutMe from '../components/AboutMe'
+import ContactMe from '../components/ContactMe'
+import Blog from '../components/Blog'
 
 import ProjectLatest from "../../../assets/projects/GameLatest.png"
 import GameLatest from "../../../assets/projects/Slimes Hometown.png"
@@ -85,7 +89,13 @@ export default function HomePage() {
             {/* <GithubContributions/> */}
             <Portfoli />
           </div>
-          
+          <div>
+            <AboutMe/>
+            <ContactMe/>
+          </div>
+          <div>
+            <Blog/>
+          </div>
 
             
             {/* <LicenseToUse/> */}
