@@ -1,4 +1,5 @@
 import SliderBG from '../../../assets/projects/SliderBG.png'
+import Post1 from '../../../assets/blog/Post1.PNG'
 
 export const blogPosts = [
   {
@@ -25,4 +26,11 @@ export const blogPosts = [
       SliderBG,
     ], 
   },
+  {
+    id: 4,
+    title: "Updated the website!",
+    date: "2025-09-05",
+    content: "Finally able to focus on my website again, added a blog section and portfolio. and change the graphics a bit",
+    image: Post1,
+  }
 ]
