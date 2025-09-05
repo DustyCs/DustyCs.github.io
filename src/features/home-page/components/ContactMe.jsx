@@ -5,17 +5,18 @@ import { motion } from 'framer-motion'
 export default function ContactMe() {
   return (
     <div className='col-span-1 flex justify-center'>
-      <div className='flex w-[60%] bg-white gap-10'>
-        <div className='w-[40%]'>
+      <div className='flex w-[70%] justify-between bg-white gap-10'>
+        <div className='w-[40%] p-4'>
           <h1 className='text-2xl px-4'>CONTACT</h1>
           <p>If you have any questions or concerns, please don't hesitate to contact me.</p>
-          <p className='px-4'>You can reach me at:</p>
-          <ul className='list-disc px-10'>
-            <ol><a href="mailto:5V9lT@example.com" className='text-blue-600 underline'>5V9lT@example.com</a></ol>
-          </ul>
+          <p>I look forward to hearing from you!</p>
+          <p>n3s8w@example.com</p>
+          <button className='mt-5 px-4 py-2 bg-red-300 rounded-lg hover:bg-red-400 transition'>
+            <a href="mailto:n3s8w@example.com" className='text-lg hover:underline'>Email</a>
+          </button>
         </div>
-        <div className='h-[10rem] w-[10rem] relative bg-gray-100 shadow-2xl shadow-red-300 rounded-full'>
-          <motion.img src={DustyChar} className='absolute bottom-0 left-[50%] -rotate-4 translate-x-[-50%] h-[12rem] object-cover' alt="" 
+        <div className='h-[15rem] w-[15rem] relative bg-gray-100 shadow-2xl m-auto shadow-red-300 rounded-full self-center'>
+          <motion.img src={DustyChar} className='absolute bottom-0 left-[50%] -rotate-4 translate-x-[-50%] h-[18rem] object-cover' alt="" 
             whileHover={{ rotate: 4 }}
             initial={{ rotate: 0 }}
             animate={{ rotate: -8 }}
