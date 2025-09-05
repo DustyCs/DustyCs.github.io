@@ -6,7 +6,7 @@ export default function LatestRelease() {
   return (
     <div className='w-full col-span-1 sm:max-h-[25rem]'>
         <div className='flex sm:flex-row flex-col items-center sm:items-end justify-around h-full overflow-auto'>
-            {/* only one image at a time */}
+            {/* only one image at a time - size 560x320 */}
               {
                 latestRelease.images.map((img, index) => (
                     <img key={index} src={img} className='w-[100%] max-w-[35rem] max-h-[20rem]' alt="" />
