@@ -4,7 +4,7 @@ import DustyChar from '../../../assets/projects/DustyChar.png'
 export default function AboutMe() {
   return (
     <div className='bg-white '>
-        <h1>DustyHansCS</h1>
+        <h1 className='text-4xl px-4'>DustyHansCS</h1>
         <div className='flex items-end gap-2'>
           <div className='h-full w-[30%] bg-red-100 flex items-end justify-center'>
             <img src={DustyChar} alt="" />
