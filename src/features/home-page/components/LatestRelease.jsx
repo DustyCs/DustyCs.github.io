@@ -6,13 +6,12 @@ export default function LatestRelease() {
   return (
     <div className='w-full col-span-1 sm:max-h-[25rem]'>
         <div className='flex sm:flex-row flex-col items-center sm:items-end justify-around h-full overflow-auto'>
-            <div className=''> {/* only one image at a time */}
+            {/* only one image at a time */}
               {
                 latestRelease.images.map((img, index) => (
-                    <img key={index} src={img} className='w-[100%] max-w-[20rem] max-h-[20rem]' alt="" />
+                    <img key={index} src={img} className='w-[100%] max-w-[35rem] max-h-[20rem]' alt="" />
                 ))
               }
-            </div>
             <div className="mt-1 bg-white sm:h-[90%] sm:p-4">
               <h1 className='text-4xl px-4'>Latest Release</h1>
               <h2 className='text-2xl'>{latestRelease.title}</h2>
