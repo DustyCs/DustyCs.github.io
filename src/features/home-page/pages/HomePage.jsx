@@ -14,7 +14,6 @@ import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 import LatestRelease from '../components/LatestRelease'
 import LicenseToUse from '../components/LicenseToUse'
-import GithubContributions from '../components/GithubContributions'
 
 function Introduction() {
   return ( // just testing for now adding responsiveness
@@ -83,22 +82,18 @@ export default function HomePage() {
   return (
     <div className='h-full'>
         <ComponentSlider slides={[Introduction, LatestProject, LatestGame]}/>
-        <div className='w-[95vw] m-auto mt-1 bg-gray-50'>
-          <div className='grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2'>
+        <div className='w-[100%] m-auto bg-gray-100'>
+          <div className='w-[95vw] m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2'>
             <LatestRelease />
-            {/* <GithubContributions/> */}
             <Portfoli />
           </div>
-          <div>
+          <div className='w-[98vw] m-auto grid mt-5 grid-cols-1 md:grid-cols-2 gap-2'>
             <AboutMe/>
             <ContactMe/>
           </div>
-          <div>
+          <div className='w-[95vw] m-auto mt-5 mb-5'>
             <Blog/>
           </div>
-
-            
-            {/* <LicenseToUse/> */}
         </div>
     </div>
   )

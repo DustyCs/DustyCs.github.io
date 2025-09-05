@@ -1,3 +1,4 @@
 # DustyCS Personal Site
 
-Well vanila js with html and css was fine but times are changing so...
+## Credits
+Some icons used in this project are from [Font Awesome Free](https://fontawesome.com), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
