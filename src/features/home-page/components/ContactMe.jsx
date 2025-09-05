@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function ContactMe() {
   return (
     <div className='col-span-1 flex justify-center'>
-      <div className='flex justify-center w-[60%] bg-white gap-10'>
+      <div className='flex w-[60%] bg-white gap-10'>
         <div className='w-[40%]'>
           <h1 className='text-2xl px-4'>CONTACT</h1>
           <p>If you have any questions or concerns, please don't hesitate to contact me.</p>

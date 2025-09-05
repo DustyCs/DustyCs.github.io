@@ -87,7 +87,7 @@ export default function HomePage() {
             <LatestRelease />
             <Portfoli />
           </div>
-          <div className='w-[98vw] m-auto grid mt-5 grid-cols-1 md:grid-cols-2 gap-2'>
+          <div className='w-[98vw] m-auto grid mt-5 grid-cols-1 md:grid-cols-2 items-start gap-2'>
             <AboutMe/>
             <ContactMe/>
           </div>
