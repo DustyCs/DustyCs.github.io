@@ -9,11 +9,11 @@ export default function LatestRelease() {
             {/* only one image at a time - size 560x320 */}
               {
                 latestRelease.images.map((img, index) => (
-                    <img key={index} src={img} className='w-[100%] max-w-[35rem] max-h-[20rem]' alt="" />
+                    <img key={index} src={img} className='w-[100%] max-w-[25rem] max-h-[20rem] sm:max-w-[35rem] sm:max-h-[20rem]' alt="" />
                 ))
               }
-            <div className="mt-1 bg-white sm:h-[90%] sm:p-4">
-              <h1 className='text-4xl px-4'>Latest Release</h1>
+            <div className="mt-1 p-5 bg-white sm:h-[90%] sm:p-4">
+              <h1 className='text-3xl font-bold sm:text-4xl px-4'>Latest Release</h1>
               <h2 className='text-2xl'>{latestRelease.title}</h2>
               <p className='text-lg my-2'>{latestRelease.description}</p>
               <a href={"https://"+latestRelease.url} target="_blank" rel="noreferrer" className='text-blue-600 underline'>{latestRelease.url}</a>

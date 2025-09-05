@@ -16,22 +16,22 @@ import LatestRelease from '../components/LatestRelease'
 import LicenseToUse from '../components/LicenseToUse'
 
 function Introduction() {
-  return ( // just testing for now adding responsiveness
-    <div className="flex grow-0 overflow-hidden sm:h-[20rem] relative pointer-events-none
+  return ( 
+    <div className="flex grow-0 overflow-hidden sm:h-[100%] relative pointer-events-none
                     flex-col items-center sm:items-start sm:flex-row">
       <div className="text-2xl w-[100%] sm:w-[35%] flex px-4 z-10 flex-col">
         <div className='text-4xl font-extrabold'>DustyHansCS</div>
-        <div className='px-1'>
+        <div className='px-1 flex-wrap'>
           <p className="text-md">Personal Site</p>
           <p>An undergraduate in Computer Science</p>
           <p>with multiple projects and games developed under my belt</p>
           <p>and an interest in furthering my knowledge and skillset</p>
-          <br />
+          <br className='md:hidden 2xl:block' />
           <p>I am currently looking for internships</p>
           <p>use the contact form below if you are interested in working with me</p>
         </div>
       </div>
-      <div className="relative  sm:w-[65%] sm:h-full overflow-hidden">
+      <div className="relative sm:w-[65%] sm:h-full overflow-hidden">
         <div className='absolute bottom-0 right-[50%] translate-x-1/2 animate-bounce transition'>
           <img src={DustyCS} alt="" className='h-[8rem] sm:h-[17rem] md:h-[20rem]' />
           <div className='text-2xl font-extrabold text-white absolute -bottom-6 right-[50%] translate-x-1/2'>DustyHans</div>
@@ -87,8 +87,8 @@ export default function HomePage() {
   return (
     <div className='h-full'>
         <ComponentSlider slides={[Introduction, LatestProject, LatestGame]}/>
-        <div className='w-[100%] m-auto bg-gray-100'>
-          <div className='w-[95vw] m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2'>
+        <div className='w-[100%] m-auto bg-gray-100 gap-5'>
+          <div className='sm:w-[95vw] m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] sm:gap-2'>
             <LatestRelease />
             <Portfoli />
           </div>

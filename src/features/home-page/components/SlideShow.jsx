@@ -23,18 +23,23 @@ export default function ComponentSlider({ slides }) {
     const CurrentSlide = slides[current]; // component
 
   return (
-    <div className="h-[25rem] sm:h-[22rem] relative flex items-center ">
+    <div className="h-auto sm:h-[22rem] relative flex flex-col sm:flex-row items-center ">
         <div className='h-[100%] '>
             <CurrentSlide />
         </div>
-        <div className="absolute bottom-0 left-[50%] translate-x-[-50%] sm:flex sm:self-center sm:gap-5">
-            <button className='text-4xl cursor-pointer ' onClick={prev}>
+        <div className="
+            flex mb-2 gap-5 items-center justify-center
+            sm:absolute bottom-0 left-[50%] sm:translate-x-[-50%] sm:flex sm:self-center sm:gap-5"> 
+            <button className='text-4xl sm:text-4xl cursor-pointer ' onClick={prev}>
                 <FaArrowLeftLong />
             </button>
-            <button className='text-4xl cursor-pointer' onClick={next}>
+            <button className='text-4xl sm:text-4xl cursor-pointer' onClick={next}>
                 <FaArrowRightLong />
             </button>
         </div>
     </div>
   )
 }
+
+// its useless to absolute the damn thing cause its the same as flex col center
+// so just make it flex col center - ffs
