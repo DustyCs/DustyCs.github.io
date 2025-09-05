@@ -21,9 +21,14 @@ function Introduction() {
                     flex-col items-center sm:items-start sm:flex-row">
       <div className="text-2xl w-[100%] sm:w-[35%] flex px-4 z-10 flex-col">
         <div className='text-4xl font-extrabold'>DustyHansCS</div>
-        <div>
+        <div className='px-1'>
           <p className="text-md">Personal Site</p>
-          <p>I'm a developer</p>
+          <p>An undergraduate in Computer Science</p>
+          <p>with multiple projects and games developed under my belt</p>
+          <p>and an interest in furthering my knowledge and skillset</p>
+          <br />
+          <p>I am currently looking for internships</p>
+          <p>use the contact form below if you are interested in working with me</p>
         </div>
       </div>
       <div className="relative  sm:w-[65%] sm:h-full overflow-hidden">
