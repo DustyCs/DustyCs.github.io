@@ -88,7 +88,7 @@ export default function HomePage() {
     <div className='h-full'>
         <ComponentSlider slides={[Introduction, LatestProject, LatestGame]}/>
         <div className='w-[100%] sm:m-auto bg-gray-100'>
-          <div className='w-[95vw] sm:m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2'>
+          <div className='sm:w-[95vw] sm:m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2'>
             <LatestRelease />
             <Portfoli />
           </div>
