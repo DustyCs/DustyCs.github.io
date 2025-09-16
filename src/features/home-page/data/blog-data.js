@@ -8,7 +8,7 @@ export const blogPosts = [
     title: "Started My Portfolio",
     date: "2025-08-10",
     content: "I finally started building my portfolio using React and Tailwind!",
-    image: SliderBG, // 👈 one image
+    image: SliderBG,
   },
   {
     id: 2,
