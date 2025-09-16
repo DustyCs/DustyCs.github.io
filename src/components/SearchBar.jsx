@@ -1,20 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { useDebounce } from "../hooks/DebounceHook";
+import { searchDataset } from "../data/search_data_set";
 
 async function fetchSuggestionsMock(q, type) {
   if (!q || q.trim().length < 1) return [];
 
-  const dataset = [
-    { id: 1, label: "My Game Engine", type: "games" },
-    { id: 2, label: "Game Assets Pack", type: "games" },
-    { id: 3, label: "How to Make Games", type: "posts" },
-    { id: 4, label: "Portfolio Projects", type: "projects" },
-    { id: 5, label: "Contact Me - Form", type: "contact" },
-    { id: 6, label: "MIT License Summary", type: "license" },
-  ];
+  const dataset = searchDataset;
 
-  // simple fuzzy-like filter (case-insensitive substring)
   const qLower = q.toLowerCase();
   return dataset
     .filter((d) => d.label.toLowerCase().includes(qLower))
@@ -86,7 +79,8 @@ export default function ResponsiveSearch() {
     setActiveIndex(-1);
 
     // perform search
-    console.log("selected:", s);
+    // console.log("selected:", s);
+    if (s.url){ window.location.href = s.url; }
   }
 
   function onKeyDown(e) {
@@ -103,7 +97,6 @@ export default function ResponsiveSearch() {
       if (activeIndex >= 0 && activeIndex < suggestions.length) {
         onSelectSuggestion(suggestions[activeIndex]);
       } else {
-        // fallback: perform search with `query`
         console.log("perform search:", query, category);
         setShowSuggestions(false);
       }
@@ -205,7 +198,7 @@ export default function ResponsiveSearch() {
           <button className="border-1 border-black text-black px-3 py-1 cursor-pointer rounded-md text-xl hover:bg-gray-300 transition sm:hidden md:hidden lg:block"
               onClick={() => {
                 console.log("perform search:", query, category);
-                setShowSuggestions(false);
+                // setShowSuggestions(false);
               }}
           >
             Search
@@ -245,8 +238,8 @@ export default function ResponsiveSearch() {
       )}
 
       {showSuggestions && !isLoading && query.trim().length > 0 && suggestions.length === 0 && (
-        <div className="absolute z-50 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-md px-3 py-3 text-sm text-gray-500">
-          No suggestions — try different words.
+        <div className="absolute top-10 left-0 z-50 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-md px-3 py-3 text-sm text-gray-500">
+          No suggestions, try different words.
         </div>
       )}
       </div>
