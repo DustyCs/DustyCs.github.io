@@ -90,7 +90,7 @@ export default function HomePage() {
         <div className='w-[100%] m-auto bg-gray-100 gap-5'>
           <div className='sm:w-[95vw] m-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] sm:gap-2'>
             <LatestRelease />
-            <Portfoli />
+            <Portfoli /> 
           </div>
           <div className='w-[98vw] m-auto grid mt-5 grid-cols-1 md:grid-cols-2 items-start gap-2'>
             <AboutMe/>
