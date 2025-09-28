@@ -7,8 +7,8 @@ import AboutMe from '../components/AboutMe'
 import ContactMe from '../components/ContactMe'
 import Blog from '../components/Blog'
 
-import ProjectLatest from "../../../assets/projects/GameLatest.png"
-import GameLatest from "../../../assets/projects/Slimes Hometown.png"
+import GameLatest from "../../../assets/projects/GameLatest.jpg"
+import ProjectLatest from "../../../assets/projects/ProjectLatest.PNG"
 
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
@@ -52,8 +52,14 @@ function Introduction() {
 function LatestProject(){
     return (
     <div className="flex grow-0 overflow-hidden h-[20rem] relative pointer-events-none">
-      <div className="text-2xl w-[35%] flex items-center px-4 z-10">
-        Project
+      <div className="text-2xl w-[35%] flex items-center flex-col px-4 z-10">
+              <div className='text-4xl font-extrabold'>Silver Squares Online</div>
+              <div className='px-1 flex-wrap'>
+                <p className="text-md">Is Out!</p>
+                <p>Based on the Game Show "Golden Balls"</p>
+                <p>This is an online version of the game</p>
+                <p>where you can play against other players online in real time thanks to Socket.IO!</p>
+              </div>
       </div>
       <div className="relative w-[65%] h-full overflow-hidden">
         <img
@@ -69,8 +75,14 @@ function LatestProject(){
 function LatestGame(){
     return (
         <div className="flex grow-0 overflow-hidden h-[20rem] relative pointer-events-none">
-            <div className="text-2xl w-[35%] flex items-center px-4 z-10">
-                Game
+            <div className="text-2xl w-[35%] flex items-center flex-col px-4 z-10">
+              <div className='text-4xl font-extrabold'>The Basement</div>
+              <div className='px-1 flex-wrap'>
+                <p className="text-md">In Development</p>
+                <p>The upcoming 2D raycasting horror game made with PyGame</p>
+                <p>is currently in development</p>
+                <p>and will be released in the coming months!</p>
+              </div>
             </div>
             <div className="relative w-[65%] h-full overflow-hidden">
                 <img
