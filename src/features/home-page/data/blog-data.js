@@ -40,5 +40,12 @@ export const blogPosts = [
     date: "2025-09-14",
     content: "So, Posted something just to try and get tracktion of my account. Hoping maybe some recruiters would visit my profile! still looking for ojt/internships! Contact me if you are interested!",
     image: Post2,
+  },
+  {
+    id: 6,
+    title: "PolyCloud is on the horizon! and The Basement is progressing!",
+    date: "2025-09-29",
+    content: "No Image sorry~ but I have 2 things in development! The Basement is finally getting some of my focus back and I also started recording some voice lines yes it will have me as a voice actor! and also another project of mine to utilize free cloud storages in one place the PolyCloud! It would be open source so look out for it!",
+    image: '',
   }
 ]
