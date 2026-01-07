@@ -47,5 +47,12 @@ export const blogPosts = [
     date: "2025-09-29",
     content: "No Image sorry~ but I have 2 things in development! The Basement is finally getting some of my focus back and I also started recording some voice lines yes it will have me as a voice actor! and also another project of mine to utilize free cloud storages in one place the PolyCloud! It would be open source so look out for it!",
     image: '',
+  },
+  {
+    id: 7,
+    title: "Diving into Microservices Architecture",
+    date: "2026-01-5",
+    content: "There's been plenty of things that I've learned from starting this massive microservice project 'AllFriends' while it's still in early development, I've learned a lot about how to structure services and communicate between them effectively. About GraphQL and even created an npm library for the shared models and database connections. Excited to see where this project goes!",
+    image: '',
   }
 ]
